@@ -1,0 +1,9 @@
+include:
+  - ./backend/docker-compose.yml
+  - ./frontend/docker-compose.yml
+services:
+  nginx:
+    image: nginx:alpine
+    depends_on:
+      - api
+      - website
